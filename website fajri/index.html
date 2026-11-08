@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Alfajri Setyo Nugroho</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+
+    </header>
+        <div class="header-right">
+            <div class="clock">
+                <span id="clock">00:00:00</span>
+                <small id="date"></small>
+            </div>
+
+            <button id="musicBtn">♫ Play Music</button>
+        </div>
+            <div class="volume-control">
+                <label for="musicVolume">🔊 Volume</label>
+                <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="0.5">
+            </div>
+    </header>
+        
+        <!-- PROFIL SECTION -->
+        <header class="card profile-card">
+            <!-- Ganti foto.jpg dengan foto Anda, atau biarkan menggunakan foto placeholder -->
+            <img src="foto.jpg" alt="Foto Profil" class="profile-img" onerror="this.src='https://via.placeholder.com/130?text=Foto+Anda'">
+            <h1>Alfajri Setyo Nugroho</h1>
+            <p class="bio">Selamat datang di halaman web pribadi saya. Tempat menyimpan dan menampilkan berbagai proyek web kreatif yang telah saya buat! 💻✨</p>
+        </header>
+
+        <!-- DAFTAR PROYEK / HALAMAN WEB YANG SUDAH DIBUAT -->
+        <section class="card">
+            <h2>Koleksi Web Proyek 🚀</h2>
+            <p>Pilih dan buka halaman web yang pernah dibuat sebelumnya:</p>
+            
+            <div class="project-list">
+                <!-- Proyek 1: Ulang Tahun Olaa -->
+                <div class="project-item">
+                    <h3>🎂 Website Ulang Tahun Olaa</h3>
+                    <p>Web ucapan lengkap dengan kado, musik, dan fitur kuis.</p>
+                    <a href="ulang-tahun-ola/index.html" target="_blank" class="action-btn">Buka Web ↗</a>
+                </div>
+
+                <!-- Proyek 2:  Ucapan Malam -->
+                <div class="project-item">
+                    <h3>☀️ Ucapan Malam</h3>
+                    <p>Web interaktif selamat pagi dan malam.</p>
+                    <a href="ucapan-malam/index.html" target="_blank" class="action-btn">Buka Web ↗</a>
+                </div>
+
+                <!-- Proyek 3:   Ucapan Pagi -->
+                <div class="project-item">
+                    <h3>☀️ Ucapan Pagi </h3>
+                    <p>Web interaktif selamat pagi dan malam.</p>
+                    <a href="ucapan-pagi/index.html" target="_blank" class="action-btn">Buka Web ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FITUR EMBED: MENAMPILKAN WEB LAINNYA LANGSUNG DI SINI -->
+        <section class="card embed-section">
+            <h2>Pratinjau Web Proyek 📱</h2>
+            <p>Anda juga bisa melihat pratinjau langsung di bawah ini:</p>
+            
+            <!-- Ganti 'ulang-tahun-olaa/index.html' dengan folder/file web yang ingin ditampilkan langsung -->
+            <div class="iframe-container">
+                <iframe src="ulang-tahun-ola/index.html" title="Pratinjau Web"></iframe>
+            </div>
+        </section>
+
+    </div>
+    <audio id="music" src="music.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

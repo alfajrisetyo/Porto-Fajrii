@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Morning, Olaa! ☀️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <!-- HEADER & JAM DIGITAL -->
+        <header class="card">
+            <div class="morning-icon">☕</div>
+            <div id="liveClock" class="clock">00:00:00</div>
+            <h1>Selamat Pagi, Olaa! ☀️</h1>
+            <p id="typingMessage" class="message"></p>
+        </header>
+ <!-- TOGGLE COZY / DARK MODE -->
+        <section class="card">
+            <h2>Ubah Suasana Tema 🌙</h2>
+            <button class="action-btn" onclick="toggleCozyMode()">🌙 Toggle Cozy Mode</button>
+        </section>
+        <!-- PEMUTAR MUSIK LATAR -->
+        <section class="card music-card">
+            <h2>Morning Soundtrack 🎵</h2>
+            <p id="musicStatus">Musik siap diputar untuk menemani pagimu ♡</p>
+            <div class="music-controls">
+                <button id="musicBtn" class="action-btn" type="button">▶ Play Musik</button>
+            </div>
+            <div class="volume-control">
+                <label for="musicVolume">🔊 Volume</label>
+                <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="0.5">
+            </div>
+            <audio id="bgMusic" loop preload="metadata">
+                <source src="music.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <!-- MOOD TRACKER -->
+        <section class="card">
+            <h2>Bagaimana Perasaanmu Hari Ini? 🌸</h2>
+            <div class="mood-buttons">
+                <button onclick="selectMood('happy')">😄 Happy</button>
+                <button onclick="selectMood('sleepy')">😴 Sleepy</button>
+                <button onclick="selectMood('excited')">✨ Bersemangat</button>
+                <button onclick="selectMood('cozy')">🧸 Cozy</button>
+            </div>
+            <p id="moodResponse" class="result-text"></p>
+        </section>
+
+        <!-- RACIK MINUMAN VIRTUAL -->
+        <section class="card">
+            <h2>Pilih Minuman Pagimu ☕</h2>
+            <p>Mau dibikinin apa hari ini, Olaa?</p>
+            <div class="mood-buttons">
+                <button onclick="makeCoffee('kopi')">☕ Kopi Hangat</button>
+                <button onclick="makeCoffee('teh')">🍵 Teh Manis</button>
+                <button onclick="makeCoffee('coklat')">🍫 Hot Chocolate</button>
+            </div>
+            <p id="coffeeResult" class="result-text highlight"></p>
+        </section>
+
+        <!-- KARTU SEMANGAT / COMPLIMENT GENERATOR -->
+        <section class="card">
+            <h2>Little Morning Reminder 🌷</h2>
+            <p>Klik tombol di bawah untuk ambil pesan spesialmu!</p>
+            <button class="action-btn" onclick="randomCompliment()">Ambil Pesan ✨</button>
+            <p id="complimentResult" class="result-text highlight"></p>
+        </section>
+
+        <!-- KOTAK KEJUTAN MISTERI -->
+        <section class="card">
+            <h2>Kotak Kejutan Pagi 🎁</h2>
+            <div class="surprise-box" onclick="openSurprise()">
+                <span id="surpriseIcon">🎁</span>
+                <p>Klik untuk buka kejutan!</p>
+            </div>
+            <p id="surpriseMessage" class="result-text"></p>
+        </section>
+
+        <!-- KIRIM HARAPAN -->
+        <section class="card">
+            <h2>Tulis Harapan Pagi Ini ✨</h2>
+            <input type="text" id="userWishInput" placeholder="Tulis harapan kecilmu..." />
+            <br><br>
+            <button class="action-btn" onclick="saveWish()">Simpan Harapan</button>
+            <p id="wishOutput" class="result-text"></p>
+        </section>
+            <footer>Made with <span>Botakk</span> for Randhitia Dwi Fayola</footer>
+  </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
